@@ -27,10 +27,13 @@ export default function ExampleScreen(props) {
 	const handleModalWarning = () => setModalVisibleWarning(!modalVisibleWarning);
 	const handleModalError = () => setModalVisibleError(!modalVisibleError);
 	return (
-		<View style={styles.container}>
+		<View style={[styles.container, { backgroundColor: 'black' }]}>
 			<TextComponent color="greyscale900" size="xTitle" weight="bold" text={'Hey, Dev 👋'} />
 			<TextComponent color="greyscale600" size="large" weight="bold" text={'Keep up the good work!'} />
 			<TextComponent color="greyscale900" size="title" weight="bold" text={'¿Quién es el famoso?'} />
+			<View style={styles.baseMargin}>
+				<BackBtn />
+			</View>
 			<AddCard onPress={handleModalError} />
 			<View style={{ width: 10, height: 10 }}></View>
 			<AddCard onPress={handleModalWarning} />

@@ -3,18 +3,19 @@ import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { Fonts, Colors } from '../../styles';
 
-export default function TextComponent(props) {
+const TextComponent = (props) => {
 	const textColor = { color: Colors[props.color] };
 	const weight = { fontWeight: Fonts.weight[props.weight] };
 	const align = { textAlign: props.align };
 	const size = { fontSize: Fonts.size[props.size] };
-
 	return (
 		<Text {...props} allowFontScaling={false} style={[size, textColor, align, weight, props.styles]}>
 			{props.text}
 		</Text>
 	);
-}
+};
+
+export default React.memo(TextComponent);
 
 TextComponent.propTypes = {
 	text: PropTypes.node,

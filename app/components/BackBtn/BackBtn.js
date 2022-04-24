@@ -1,31 +1,21 @@
-import React, { 
-	// useEffect, 
-	// useState 
-} from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './BackBtnStyle';
+import back from '../../../assets/back.png';
 
-export default function BackBtn (props) {
-	return (
-		<View>
-			<Text>BackBtn</Text>
-		</View>
-	);
-}
+const BackBtn = ({ onPress }) => (
+	<TouchableOpacity onPress={onPress} style={[styles.container, styles.centerObjects]}>
+		<Image source={back} />
+	</TouchableOpacity>
+);
 
+export default React.memo(BackBtn);
 
 BackBtn.propTypes = {
-	// data: PropTypes.array
-}
+	onPress: PropTypes.func,
+};
 
 BackBtn.defaultProps = {
-	// data: []
-}
-
-
-
-
-
-
-
+	onPress: () => {},
+};
