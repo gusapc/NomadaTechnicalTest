@@ -13,7 +13,6 @@ const LabelTag = ({ color, text, textColor }) => (
 			styles.smallPadding,
 			styles.borderRadius,
 			styles.smallVerticalMargin,
-			styles.smallHorizontalMargin,
 		]}
 	>
 		<View style={styles.baseHorizontalMargin}>

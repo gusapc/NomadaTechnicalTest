@@ -31,6 +31,14 @@ export default function ExampleScreen(props) {
 			<TextComponent color="greyscale900" size="xTitle" weight="bold" text={'Hey, Dev 👋'} />
 			<TextComponent color="greyscale600" size="large" weight="bold" text={'Keep up the good work!'} />
 			<TextComponent color="greyscale900" size="title" weight="bold" text={'¿Quién es el famoso?'} />
+			<InfoTitle
+				title="Will Smith"
+				subtitle="Popularidad:"
+				tag="Hombre"
+				number="27.97"
+				tagColo="warning"
+				textColor="white"
+			/>
 			<View style={styles.baseMargin}>
 				<BackBtn />
 			</View>

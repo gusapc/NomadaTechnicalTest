@@ -1,31 +1,43 @@
-import React, { 
-	// useEffect, 
-	// useState 
-} from 'react';
-import { Text, View } from 'react-native';
+import React from 'react'; // useState // useEffect,
+import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
+import TextComponent from '../TextComponent';
+import LabelTag from '../LabelTag';
 import styles from './InfoTitleStyle';
+import Star from '../../../assets/star.png';
 
-export default function InfoTitle (props) {
-	return (
-		<View>
-			<Text>InfoTitle</Text>
+const InfoTitle = ({ title, subtitle, tag, number, tagColo, textColor }) => (
+	<View>
+		<View style={[styles.row, styles.justifyContentSpaceBetween, styles.alignItemsFlexEnd]}>
+			<TextComponent weight="bold" size="big" color={textColor} text={title} />
+			<TextComponent weight="bold" size="large" color={textColor} text={subtitle} />
 		</View>
-	);
-}
+		<View style={[styles.row, styles.justifyContentSpaceBetween, styles.alignItemFlexStart]}>
+			<LabelTag color={tagColo} text={tag} />
+			<View style={[styles.row, styles.alignItemsCenter]}>
+				<TextComponent weight="bold" size="large" color={textColor} text={number} />
+				<Image source={Star} />
+			</View>
+		</View>
+	</View>
+);
 
+export default React.memo(InfoTitle);
 
 InfoTitle.propTypes = {
-	// data: PropTypes.array
-}
+	title: PropTypes.string,
+	subtitle: PropTypes.string,
+	tag: PropTypes.string,
+	number: PropTypes.string,
+	tagColo: PropTypes.string,
+	textColor: PropTypes.string,
+};
 
 InfoTitle.defaultProps = {
-	// data: []
-}
-
-
-
-
-
-
-
+	title: '',
+	subtitle: '',
+	tag: '',
+	number: '',
+	tagColo: 'warning',
+	textColor: 'white',
+};
