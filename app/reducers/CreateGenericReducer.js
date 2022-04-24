@@ -1,4 +1,4 @@
-import Selectors from 'NomadaTechnicalTest/app/Selectors';
+import Selectors from '../Selectors';
 import { createSelector } from 'reselect'
 import camelcase from 'camelcase';
 

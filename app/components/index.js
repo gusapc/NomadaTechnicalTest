@@ -1,0 +1,9 @@
+export { default as AddCard } from './AddCard';
+export { default as HelloWorld } from './HelloWorld';
+export { default as InfoTitle } from './InfoTitle';
+export { default as MovieItem } from './MovieItem';
+export { default as TextComponent } from './TextComponent';
+export { default as BackBtn } from './BackBtn';
+export { default as IconTitleRow } from './IconTitleRow';
+export { default as LabelTag } from './LabelTag';
+export { default as PrimaryBtn } from './PrimaryBtn';

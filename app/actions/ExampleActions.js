@@ -1,4 +1,4 @@
-import ApiService from 'NomadaTechnicalTest/app/services/ApiService';
+// import ApiService from 'NomadaTechnicalTest/app/services/ApiService';
 
 // Declare action names as constants with uppercase string
 export const FETCH_EXAMPLE_BEGIN = 'FETCH_EXAMPLE_BEGIN';

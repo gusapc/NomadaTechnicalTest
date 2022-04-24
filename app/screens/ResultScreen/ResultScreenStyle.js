@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
-// import { Fonts, Colors, Metrics } from 'nomadatechnicaltest/app/styles';
-import { ApplicationStyles } from 'nomadatechnicaltest/app/styles';
+// import { Fonts, Colors, Metrics } from '../../styles';
+import { ApplicationStyles } from '../../styles';
 
 export default StyleSheet.create({
 	 ...ApplicationStyles.screen,

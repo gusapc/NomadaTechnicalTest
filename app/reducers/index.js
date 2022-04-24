@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import Example from 'NomadaTechnicalTest/app/reducers/ExampleReducer';
-import CreateGenericReducer from 'NomadaTechnicalTest/app/reducers/CreateGenericReducer.js'
+import Example from './ExampleReducer';
+import CreateGenericReducer from './CreateGenericReducer.js'
 
 const rootReducer = combineReducers({
 	Example,

@@ -4,7 +4,7 @@ import {
 	 GET_EXAMPLE_SUCCESS,
 	GET_EXAMPLE_FAILURE,
 	RESET_EXAMPLE,
-} from 'NomadaTechnicalTest/app/actions/ExampleActions';
+} from '../actions/ExampleActions';
 
 //Example initial state
 const initialState = {
