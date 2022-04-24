@@ -12,11 +12,12 @@ const LabelTag = ({ color, text, textColor }) => (
 			styles.centerObjects,
 			styles.smallPadding,
 			styles.borderRadius,
-			styles.baseMargin,
+			styles.smallVerticalMargin,
+			styles.smallHorizontalMargin,
 		]}
 	>
 		<View style={styles.baseHorizontalMargin}>
-			<TextComponent text={text} color={textColor} />
+			<TextComponent size="large" weight="bold" text={text} color={textColor} />
 		</View>
 	</View>
 );

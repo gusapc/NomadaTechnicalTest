@@ -9,9 +9,9 @@ const ModalBottom = ({ handleModal, modalVisible, children }) => (
 			<React.Fragment>
 				<View style={styles.modalView}>
 					<React.Fragment>
-						<View style={[styles.top, styles.centerObjects]}>
+						<TouchableOpacity onPress={handleModal} style={[styles.top, styles.centerObjects]}>
 							<View style={[styles.tab, styles.baseMargin]} />
-						</View>
+						</TouchableOpacity>
 						{children}
 					</React.Fragment>
 				</View>

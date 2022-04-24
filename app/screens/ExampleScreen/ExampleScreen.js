@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { View, Modal, Text, Pressable, Alert, SafeAreaView, Image } from 'react-native';
+import { View, SafeAreaView, Image } from 'react-native';
 import styles from './ExampleScreenStyle';
 import Camera from '../../../assets/camera.png';
 import Photo from '../../../assets/photo.png';
 import {
 	AddCard,
-	HelloWorld,
 	InfoTitle,
 	MovieItem,
 	TextComponent,
@@ -19,20 +18,28 @@ import {
 export default function ExampleScreen(props) {
 	const [modalVisiblePickImg, setModalVisiblePickImg] = useState(false);
 	const [modalVisibleLoagind, setModalVisibleLoagind] = useState(false);
-	const [modalVisibleSucces, setModalVisibleSucces] = useState(false);
+	const [modalVisibleSuccess, setModalVisibleSuccess] = useState(false);
+	const [modalVisibleWarning, setModalVisibleWarning] = useState(false);
+	const [modalVisibleError, setModalVisibleError] = useState(false);
 	const handleModalPickImg = () => setModalVisiblePickImg(!modalVisiblePickImg);
 	const handleModalLoading = () => setModalVisibleLoagind(!modalVisibleLoagind);
-	const handleModalSucces = () => setModalVisibleSucces(!modalVisibleSucces);
+	const handleModalSuccess = () => setModalVisibleSuccess(!modalVisibleSuccess);
+	const handleModalWarning = () => setModalVisibleWarning(!modalVisibleWarning);
+	const handleModalError = () => setModalVisibleError(!modalVisibleError);
 	return (
 		<View style={styles.container}>
 			<TextComponent color="greyscale900" size="xTitle" weight="bold" text={'Hey, Dev 👋'} />
 			<TextComponent color="greyscale600" size="large" weight="bold" text={'Keep up the good work!'} />
 			<TextComponent color="greyscale900" size="title" weight="bold" text={'¿Quién es el famoso?'} />
+			<AddCard onPress={handleModalError} />
+			<View style={{ width: 10, height: 10 }}></View>
+			<AddCard onPress={handleModalWarning} />
+			<View style={{ width: 10, height: 10 }}></View>
 			<AddCard onPress={handleModalPickImg} />
 			<View style={{ width: 10, height: 10 }}></View>
 			<AddCard onPress={handleModalLoading} />
 			<View style={{ width: 10, height: 10 }}></View>
-			<AddCard onPress={handleModalSucces} />
+			<AddCard onPress={handleModalSuccess} />
 			<ModalBottom handleModal={handleModalPickImg} modalVisible={modalVisiblePickImg}>
 				<SafeAreaView>
 					<View style={styles.baseMargin}>
@@ -68,7 +75,7 @@ export default function ExampleScreen(props) {
 					<LabelTag color="primary" text="Buscando..." textColor="white" />
 				</SafeAreaView>
 			</ModalBottom>
-			<ModalBottom handleModal={handleModalSucces} modalVisible={modalVisibleSucces}>
+			<ModalBottom handleModal={handleModalSuccess} modalVisible={modalVisibleSuccess}>
 				<SafeAreaView style={styles.alignItemsCenter}>
 					<View style={styles.baseMargin}>
 						<TextComponent align="center" color="greyscale700" size="large" weight="bold" text={'Listo'} />
@@ -80,6 +87,64 @@ export default function ExampleScreen(props) {
 						style={styles.actImg}
 					/>
 					<LabelTag color="success" text="Will Smith" textColor="white" />
+				</SafeAreaView>
+			</ModalBottom>
+			<ModalBottom handleModal={handleModalWarning} modalVisible={modalVisibleWarning}>
+				<SafeAreaView style={styles.alignItemsCenter}>
+					<View style={styles.baseMargin}>
+						<TextComponent
+							align="center"
+							color="greyscale700"
+							size="large"
+							weight="bold"
+							text={'¿Es un famoso?'}
+						/>
+					</View>
+					<Image
+						source={{
+							uri: 'https://estatodobientuc.com/wp-content/uploads/2021/05/willwill_smith_crop1594763138495.jpg_423682103.jpg',
+						}}
+						style={styles.actImg}
+					/>
+					<View style={styles.baseMargin}>
+						<LabelTag color="warning" text="No se encontró" textColor="white" />
+					</View>
+					<PrimaryBtn
+						onPress={handleModalWarning}
+						bgColor="primary"
+						text={'Cerrar'}
+						colorText="white"
+						borderColor="primary"
+					/>
+				</SafeAreaView>
+			</ModalBottom>
+			<ModalBottom handleModal={handleModalError} modalVisible={modalVisibleError}>
+				<SafeAreaView style={styles.alignItemsCenter}>
+					<View style={styles.baseMargin}>
+						<TextComponent
+							align="center"
+							color="greyscale700"
+							size="large"
+							weight="bold"
+							text={'Hubo un error'}
+						/>
+					</View>
+					<Image
+						source={{
+							uri: 'https://estatodobientuc.com/wp-content/uploads/2021/05/willwill_smith_crop1594763138495.jpg_423682103.jpg',
+						}}
+						style={styles.actImg}
+					/>
+					<View style={styles.baseMargin}>
+						<LabelTag color="error" text="Error de red o de servidor" textColor="white" />
+					</View>
+					<PrimaryBtn
+						onPress={handleModalError}
+						bgColor="primary"
+						text={'Cerrar'}
+						colorText="white"
+						borderColor="primary"
+					/>
 				</SafeAreaView>
 			</ModalBottom>
 		</View>
