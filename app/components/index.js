@@ -7,3 +7,4 @@ export { default as BackBtn } from './BackBtn';
 export { default as IconTitleRow } from './IconTitleRow';
 export { default as LabelTag } from './LabelTag';
 export { default as PrimaryBtn } from './PrimaryBtn';
+export { default as ModalBottom } from './ModalBottom';
