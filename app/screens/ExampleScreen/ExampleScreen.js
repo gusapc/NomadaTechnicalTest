@@ -27,10 +27,24 @@ export default function ExampleScreen(props) {
 	const handleModalWarning = () => setModalVisibleWarning(!modalVisibleWarning);
 	const handleModalError = () => setModalVisibleError(!modalVisibleError);
 	return (
-		<View style={[styles.container, { backgroundColor: 'black' }]}>
+		<View style={[styles.container, { backgroundColor: 'grey' }]}>
 			<TextComponent color="greyscale900" size="xTitle" weight="bold" text={'Hey, Dev 👋'} />
 			<TextComponent color="greyscale600" size="large" weight="bold" text={'Keep up the good work!'} />
 			<TextComponent color="greyscale900" size="title" weight="bold" text={'¿Quién es el famoso?'} />
+			<TextComponent color="black" size="big" weight="bold" text={'Peliculas:'} />
+			<MovieItem
+				title="Suicide Squad"
+				text="From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United..."
+				uri="https://images-na.ssl-images-amazon.com/images/I/91OF59zYWJL.jpg"
+				value="5.9"
+			/>
+			<View style={{ width: 10, height: 10 }}></View>
+			<MovieItem
+				title="I Am Legend"
+				text="Robert Neville is a scientist who was unable to stop the spread of the terrible virus that was incurable and man-made. Immune, Neville is now the..."
+				uri="https://play-lh.googleusercontent.com/6Oz3lpsE6Oyh2qIQDUOBixxcIXQKiRsbvfdOvULqImGiU1hfakMJ8ubsn82dmHpHbyQ"
+				value="7.2"
+			/>
 			<InfoTitle
 				title="Will Smith"
 				subtitle="Popularidad:"

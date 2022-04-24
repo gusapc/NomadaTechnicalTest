@@ -15,6 +15,7 @@ const colors = {
 	greyscale800: '#1E293B',
 	greyscale900: '#0F172A',
 	white: '#fff',
+	black: '#000',
 };
 
 export default colors;
