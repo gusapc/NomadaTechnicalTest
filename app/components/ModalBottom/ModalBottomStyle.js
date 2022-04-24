@@ -5,7 +5,7 @@ import { ApplicationStyles } from '../../styles';
 export default StyleSheet.create({
 	...ApplicationStyles.screen,
 	// ...ApplicationStyles.flexBox,
-	// ...ApplicationStyles.margins,
+	...ApplicationStyles.margins,
 	bgTouch: {
 		backgroundColor: Colors.greyscale900,
 		opacity: 0.5,
@@ -32,5 +32,13 @@ export default StyleSheet.create({
 		shadowOpacity: 0.25,
 		shadowRadius: 4,
 		elevation: 5,
+	},
+	tab: {
+		height: 5,
+		width: Metrics.screenWidth * 0.1,
+		backgroundColor: Colors.greyscale100,
+	},
+	top: {
+		width: Metrics.screenWidth,
 	},
 });

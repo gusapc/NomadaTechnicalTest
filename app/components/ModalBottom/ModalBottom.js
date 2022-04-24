@@ -7,7 +7,14 @@ const ModalBottom = ({ handleModal, modalVisible, children }) => (
 	<Modal animationType="slide" transparent={true} visible={modalVisible} onRequestClose={handleModal}>
 		<View style={[styles.centeredView]}>
 			<React.Fragment>
-				<View style={styles.modalView}>{children}</View>
+				<View style={styles.modalView}>
+					<React.Fragment>
+						<View style={[styles.top, styles.centerObjects]}>
+							<View style={[styles.tab, styles.baseMargin]} />
+						</View>
+						{children}
+					</React.Fragment>
+				</View>
 				<TouchableOpacity onPress={handleModal} style={[styles.bgTouch]} />
 			</React.Fragment>
 		</View>

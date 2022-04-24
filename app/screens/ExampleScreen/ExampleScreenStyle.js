@@ -4,7 +4,7 @@ import { ApplicationStyles } from '../../styles';
 
 export default StyleSheet.create({
 	// ...ApplicationStyles.screen,
-	// ...ApplicationStyles.flexBox,
+	...ApplicationStyles.flexBox,
 	...ApplicationStyles.margins,
 	container: {
 		flex: 1,
@@ -50,5 +50,22 @@ export default StyleSheet.create({
 	modalText: {
 		marginBottom: 15,
 		textAlign: 'center',
+	},
+	actImg: { height: 211, width: 175, borderRadius: 50 },
+	containerContent: { flex: 1, marginTop: 40 },
+	containerHeader: {
+		flex: 1,
+		alignContent: 'center',
+		alignItems: 'center',
+		justifyContent: 'center',
+		height: 40,
+		backgroundColor: '#F1F1F1',
+	},
+	headerContent: {
+		marginTop: 0,
+	},
+	Modal: {
+		backgroundColor: '#005252',
+		marginTop: 0,
 	},
 });
