@@ -1,31 +1,30 @@
-import React, { 
-	// useEffect, 
-	// useState 
-} from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import { View, Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './IconTitleRowStyle';
+import TextComponent from '../TextComponent';
 
-export default function IconTitleRow (props) {
-	return (
-		<View>
-			<Text>IconTitleRow</Text>
-		</View>
-	);
-}
+const IconTitleRow = ({ img, text, onPress }) => (
+	<TouchableOpacity onPress={onPress} style={[styles.row, styles.baseMargin, styles.alignItemsCenter]}>
+		{img && (
+			<View style={[styles.baseRightMargin]}>
+				<Image source={img} />
+			</View>
+		)}
+		<TextComponent text={text} />
+	</TouchableOpacity>
+);
 
+export default React.memo(IconTitleRow);
 
 IconTitleRow.propTypes = {
-	// data: PropTypes.array
-}
+	img: PropTypes.Image,
+	text: PropTypes.string,
+	onPress: PropTypes.func,
+};
 
 IconTitleRow.defaultProps = {
-	// data: []
-}
-
-
-
-
-
-
-
+	img: null,
+	text: '',
+	onPress: () => {},
+};

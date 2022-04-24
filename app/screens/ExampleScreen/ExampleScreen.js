@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, Modal, Text, Pressable, Alert, SafeAreaView } from 'react-native';
 import styles from './ExampleScreenStyle';
+import Camera from '../../../assets/camera.png';
+import Photo from '../../../assets/photo.png';
 import {
 	AddCard,
 	HelloWorld,
@@ -25,7 +27,17 @@ export default function ExampleScreen(props) {
 			<AddCard onPress={handleModal} />
 			<ModalBottom handleModal={handleModal} modalVisible={modalVisiblePickImg}>
 				<SafeAreaView>
-					<TextComponent color="greyscale900" size="xTitle" weight="bold" text={'Selecciona una foto'} />
+					<View style={styles.baseMargin}>
+						<TextComponent
+							align="center"
+							color="greyscale700"
+							size="large"
+							weight="bold"
+							text={'Selecciona una foto'}
+						/>
+					</View>
+					<IconTitleRow img={Camera} text="Galeria de fotos" />
+					<IconTitleRow img={Photo} text="Cámara" />
 				</SafeAreaView>
 			</ModalBottom>
 		</View>
