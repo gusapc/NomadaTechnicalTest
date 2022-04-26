@@ -5,8 +5,8 @@ import { HomeScreen, ResultScreen, ExampleScreen } from './screens';
 const AppStack = createStackNavigator();
 
 const AppNavigator = () => (
-	<AppStack.Navigator>
-		<AppStack.Screen name="ExampleScreen" component={ExampleScreen} />
+	<AppStack.Navigator screenOptions={{ headerShown: false }}>
+		{/* <AppStack.Screen name="ExampleScreen" component={ExampleScreen} /> */}
 		<AppStack.Screen name="HomeScreen" component={HomeScreen} />
 		<AppStack.Screen name="ResultScreen" component={ResultScreen} />
 	</AppStack.Navigator>

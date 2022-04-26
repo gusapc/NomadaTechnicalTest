@@ -15,4 +15,7 @@ export default StyleSheet.create({
 		backgroundColor: Colors.greyscale100,
 		borderRadius: 16,
 	},
+	texts: { height: '100%', width: '70%', padding: 8 },
+	img: { height: '100%', width: '30%', padding: 8 },
+	imgUri: { borderRadius: 16, height: '70%', width: '80%' },
 });

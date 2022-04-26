@@ -1,11 +1,10 @@
-import { combineReducers } from 'redux'
-import Example from './ExampleReducer';
-import CreateGenericReducer from './CreateGenericReducer.js'
-
+import { combineReducers } from 'redux';
+import SimpleObjectReducer from './SimpleObjectReducer';
+import ListReducer from './ListReducer';
 const rootReducer = combineReducers({
-	Example,
-    GenericExample: CreateGenericReducer('GENERIC_EXAMPLE')
+	Movies: ListReducer('MOVIES'),
+	User: SimpleObjectReducer('USER'),
+	Actor: SimpleObjectReducer('ACTOR'),
 });
 
 export default rootReducer;
-

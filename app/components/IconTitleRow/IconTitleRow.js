@@ -18,7 +18,7 @@ const IconTitleRow = ({ img, text, onPress }) => (
 export default React.memo(IconTitleRow);
 
 IconTitleRow.propTypes = {
-	img: PropTypes.Image,
+	img: PropTypes.any,
 	text: PropTypes.string,
 	onPress: PropTypes.func,
 };
