@@ -2,6 +2,8 @@
 
 https://expo.io/@gusapc?tab=projects
 
+#### Para probar el demo se requiere tener la App "expo go" en su celular para probar el demo
+
 # Requisitos
 
 ##### Tener terminal de Linux
