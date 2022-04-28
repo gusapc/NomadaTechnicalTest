@@ -11,7 +11,7 @@ const MovieItem = ({ title, text, uri, value }) => (
 			<View style={[styles.texts, styles.justifyContentSpaceBetween]}>
 				<TextComponent align="left" color="greyscale900" size="big" weight="bold" text={title} />
 				<TextComponent
-					numberOfLines={6}
+					numberOfLines={5}
 					ellipsizeMode="tail"
 					color="greyscale900"
 					size="large"
