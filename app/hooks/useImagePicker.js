@@ -5,6 +5,7 @@ export default function () {
 	const [img, setImg] = React.useState(null);
 
 	const pickImage = async (isFromGalery = true) => {
+		await ImagePicker.requestCameraPermissionsAsync();
 		let result = await ImagePicker[isFromGalery ? 'launchImageLibraryAsync' : 'launchCameraAsync']({
 			mediaTypes: ImagePicker.MediaTypeOptions.Images,
 			allowsEditing: true,
