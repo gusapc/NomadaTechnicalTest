@@ -6,6 +6,6 @@ export default StyleSheet.create({
 	...ApplicationStyles.screen,
 	...ApplicationStyles.flexBox,
 	...ApplicationStyles.margins,
-	header: { width: Metrics.screenWidth, height: Metrics.screenHeight * 0.6 },
+	header: { width: Metrics.screenWidth, height: Metrics.screenHeight * 0.5 },
 	haderTitle: { width: Metrics.screenWidth, position: 'absolute' },
 });
