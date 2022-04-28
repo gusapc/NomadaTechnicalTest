@@ -1,16 +1,23 @@
 import React from 'react';
-import { Image, View, TouchableOpacity } from 'react-native';
+import { Image, View } from 'react-native';
 import PropTypes from 'prop-types';
 import styles from './MovieItemStyle';
 import TextComponent from '../TextComponent';
 import Star from '../../../assets/star.png';
 
 const MovieItem = ({ title, text, uri, value }) => (
-	<View style={[styles.container, styles.baseHorizontalPadding]}>
+	<View style={[styles.container, styles.baseHorizontalPadding, styles.smallVerticalMargin]}>
 		<View onPress={() => {}} style={[styles.touch, styles.centerObjects, styles.row]}>
 			<View style={[styles.texts, styles.justifyContentSpaceBetween]}>
 				<TextComponent align="left" color="greyscale900" size="big" weight="bold" text={title} />
-				<TextComponent color="greyscale900" size="large" weight="bold" text={text} />
+				<TextComponent
+					numberOfLines={6}
+					ellipsizeMode="tail"
+					color="greyscale900"
+					size="large"
+					weight="bold"
+					text={text}
+				/>
 			</View>
 			<View style={[styles.img, styles.centerObjects]}>
 				{uri && <Image source={{ uri }} style={styles.imgUri} />}
@@ -29,7 +36,7 @@ MovieItem.propTypes = {
 	title: PropTypes.string,
 	text: PropTypes.string,
 	uri: PropTypes.string,
-	value: PropTypes.string,
+	value: PropTypes.number,
 };
 
 MovieItem.defaultProps = {

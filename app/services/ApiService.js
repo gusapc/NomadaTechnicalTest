@@ -40,6 +40,13 @@ export default {
 		// return await axios(params);
 	},
 
+	async getActorByName({ actorName }) {
+		const data = { query: actorName, api_key: env.api_key };
+		const queries = this.makeQueryParams(data);
+		let url = `${env.themoviedb}/search/person?${queries}`;
+		return await axios({ method: 'get', url });
+	},
+
 	makeQueryParams(params) {
 		let queries = '';
 		for (var key in params) {

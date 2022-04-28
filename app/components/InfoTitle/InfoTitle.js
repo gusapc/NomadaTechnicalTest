@@ -7,7 +7,7 @@ import styles from './InfoTitleStyle';
 import Star from '../../../assets/star.png';
 
 const InfoTitle = ({ title, subtitle, tag, number, tagColo, textColor }) => (
-	<View>
+	<View style={styles.baseHorizontalMargin}>
 		<View style={[styles.row, styles.justifyContentSpaceBetween, styles.alignItemsFlexEnd]}>
 			<TextComponent weight="bold" size="big" color={textColor} text={title} />
 			<TextComponent weight="bold" size="large" color={textColor} text={subtitle} />
@@ -28,7 +28,7 @@ InfoTitle.propTypes = {
 	title: PropTypes.string,
 	subtitle: PropTypes.string,
 	tag: PropTypes.string,
-	number: PropTypes.string,
+	number: PropTypes.any,
 	tagColo: PropTypes.string,
 	textColor: PropTypes.string,
 };

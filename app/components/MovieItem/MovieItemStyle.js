@@ -12,7 +12,7 @@ export default StyleSheet.create({
 	},
 	touch: {
 		height: '100%',
-		backgroundColor: Colors.greyscale100,
+		backgroundColor: Colors.greyscale200,
 		borderRadius: 16,
 	},
 	texts: { height: '100%', width: '70%', padding: 8 },
