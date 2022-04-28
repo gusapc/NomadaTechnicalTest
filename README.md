@@ -5,6 +5,9 @@ https://expo.io/@gusapc?tab=projects
 #### Para probar el demo se requiere tener la App "expo go" en su celular para probar el demo
 
 https://apps.apple.com/mx/app/expo-go/id982107779
+
+##
+
 https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es_MX&gl=US
 
 # Requisitos
