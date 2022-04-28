@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, View, Image, SafeAreaView, Text } from 'react-native';
+import { ActivityIndicator, View, Image, SafeAreaView, StatusBar } from 'react-native';
 import styles from './HomeScreenStyle';
 import { Colors } from '../../styles';
 import { useImagePicker, useApiSimpleObj } from '../../hooks';
@@ -51,6 +51,7 @@ export default function HomeScreen({ navigation }) {
 
 	return (
 		<View style={[styles.container]}>
+			<StatusBar barStyle={'dark-content'} />
 			<SafeAreaView>
 				<View style={styles.baseMargin}>
 					<TextComponent color="greyscale900" size="xTitle" weight="bold" text={'Hey, Dev 👋'} />
